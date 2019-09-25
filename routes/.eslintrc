@@ -1,0 +1,11 @@
+{
+    "extends": [
+        "eslint:recommended", 
+        "plugin:node/recommended",
+        "plugin:mocha/recommended"
+    ],
+    "plugins": ["node", "mocha"],
+    "rules":{
+        "semi": "error"
+    }
+}
