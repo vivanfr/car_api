@@ -1,3 +1,5 @@
+/* eslint-disable node/no-unpublished-require */
+/* eslint-disable no-undef */
 const chai = require('chai');
 const chaiHTTP = require('chai-http');
 
@@ -9,7 +11,7 @@ chai.should();
 describe ('Car router', function(){
     describe('GET /car', function(){
         it('should return an array of Cars', function(done){
-            chai.request(app).get('/car').end(err, res) => {
+            chai.request(app).get('/car').end((err, res) => {
                 if (err) done(err);
                 res.should.have.status(200);
             });
