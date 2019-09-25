@@ -11,7 +11,7 @@ const CarSchema = new mongoose.Schema({
 CarSchema.pre('save', function(done) {
     try{
         this.slug = uniqueSlug(`${this.brand + this.model + this.price}`);
-        done()
+        done();
     } catch (e){
         done(e);
     }
