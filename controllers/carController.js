@@ -80,7 +80,7 @@ class CarController{
 
     }
     static async updateCar(request, response){
-        console.log('--------Update car')
+        console.log('--------Update car');
         try {
             const{slug} = request.params;
             const car = await Car.findOne({slug}).exec();
